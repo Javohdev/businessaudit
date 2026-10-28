@@ -1,0 +1,4 @@
+# Local server script
+serve.ps1
+.system_generated/
+*.log

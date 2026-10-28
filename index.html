@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BizAudit — Marketing & Budjet Auditi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo" data-icon="bar"></div>
+        <div>
+          <div class="brand-name">BizAudit</div>
+          <div class="brand-sub">Marketing & Budjet Auditi</div>
+        </div>
+      </div>
+
+      <nav id="stepper" class="stepper"></nav>
+
+      <div class="side-card">
+        <span class="side-card-ic" data-icon="shield"></span>
+        <div>
+          <b>Ma'lumotlaringiz xavfsiz</b>
+          <p>Barcha hisob-kitoblar faqat brauzeringizda bajariladi.</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <header class="topbar">
+        <div class="crumbs" id="crumbs">Boshlash</div>
+        <div class="top-right" id="topRight"></div>
+      </header>
+      <div class="topprogress"><div id="progressBar"></div></div>
+
+      <div class="content">
+        <!-- Start -->
+        <section id="start" class="hero view">
+          <span class="eyebrow"><span data-icon="sparkles"></span> Bepul biznes diagnostikasi</span>
+          <h1>Reklama byudjetingizni <span class="grad">aniq raqamlar</span> bilan rejalashtiring</h1>
+          <p class="lead">9 ta savolga javob bering — tizim kerakli lidlar sonini, minimal va optimal reklama byudjetini hamda biznesingizdagi xavflarni hisoblab beradi.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-lg" id="startBtn">Auditni boshlash <span data-icon="arrowR"></span></button>
+            <span class="meta"><span data-icon="clock"></span> Taxminan 2 daqiqa</span>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature"><div class="f-ic" data-icon="database"></div><h4>Biznes diagnostikasi</h4><p>CRM, sotuv bo'limi va upakovka holati tahlili</p></div>
+            <div class="feature"><div class="f-ic" data-icon="filter"></div><h4>Funnel hisob-kitobi</h4><p>Daromad maqsadidan kerakli lidlargacha</p></div>
+            <div class="feature"><div class="f-ic" data-icon="wallet"></div><h4>Reklama byudjeti</h4><p>Platforma benchmarklari asosida aniq summa</p></div>
+            <div class="feature"><div class="f-ic" data-icon="bulb"></div><h4>Tavsiyalar</h4><p>Byudjetni tejash bo'yicha amaliy qadamlar</p></div>
+          </div>
+        </section>
+
+        <!-- Quiz -->
+        <section id="quiz" class="quiz view hidden">
+          <div class="q-head">
+            <span class="q-icon-badge" id="qIconBadge"></span>
+            <div class="q-head-text">
+              <span class="q-num" id="qNum"></span>
+              <span class="q-group" id="qGroup"></span>
+            </div>
+          </div>
+          <div id="sectionNote" class="note hidden"></div>
+          <h2 id="questionTitle"></h2>
+          <p id="questionHint" class="hint"></p>
+          <div id="answerArea"></div>
+          <div class="q-nav">
+            <button class="btn btn-ghost" id="backBtn"><span data-icon="arrowL"></span> Orqaga</button>
+            <span class="kbd-hint" id="kbdHint"></span>
+            <button class="btn btn-primary hidden" id="nextBtn"></button>
+          </div>
+        </section>
+
+        <!-- Result -->
+        <section id="result" class="view hidden"></section>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
