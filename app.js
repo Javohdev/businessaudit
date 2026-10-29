@@ -357,8 +357,8 @@ function badge(tone, text) {
 function gauge(score, color) {
   const len = Math.PI * 80;
   return `<svg class="gauge" viewBox="0 0 200 110">
-    <path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="#eef0f5" stroke-width="14" stroke-linecap="round"/>
-    <path id="gArc" d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="${color}" stroke-width="14" stroke-linecap="round"
+    <path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="hsl(240 4.8% 90%)" stroke-width="12" stroke-linecap="round"/>
+    <path id="gArc" d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="${color}" stroke-width="12" stroke-linecap="round"
       stroke-dasharray="0 ${len}" style="transition: stroke-dasharray 1s cubic-bezier(.4,0,.2,1)" data-len="${len}" data-score="${score}"/>
   </svg>`;
 }
@@ -441,9 +441,9 @@ function showResult() {
         <div class="panel-head"><h3>${icon("filter")} Funnel hisob-kitobi</h3></div>
         <div class="panel-body">
           <div class="funnel">
-            <div class="f-row"><span class="f-name">Lidlar</span><div class="f-track"><div class="f-bar" data-w="100" style="background:#4f46e5">100%</div></div><span class="f-val">${num(r.leads)}</span></div>
-            <div class="f-row"><span class="f-name">Mijozlar</span><div class="f-track"><div class="f-bar" data-w="${convW}" style="background:#2563eb">${a.conversion}%</div></div><span class="f-val">${num(r.clients)}</span></div>
-            <div class="f-row"><span class="f-name">Daromad</span><div class="f-track"><div class="f-bar" data-w="${convW}" style="background:#16a34a"></div></div><span class="f-val">${fmt(a.revenue)}</span></div>
+            <div class="f-row"><span class="f-name">Lidlar</span><div class="f-track"><div class="f-bar" data-w="100" style="background:hsl(240 5.9% 10%)">100%</div></div><span class="f-val">${num(r.leads)}</span></div>
+            <div class="f-row"><span class="f-name">Mijozlar</span><div class="f-track"><div class="f-bar" data-w="${convW}" style="background:hsl(240 3.8% 46.1%)">${a.conversion}%</div></div><span class="f-val">${num(r.clients)}</span></div>
+            <div class="f-row"><span class="f-name">Daromad</span><div class="f-track"><div class="f-bar" data-w="${convW}" style="background:hsl(142.1 76.2% 36.3%)"></div></div><span class="f-val">${fmt(a.revenue)}</span></div>
           </div>
           <div class="formula">${icon("calc")} ${fmt(a.revenue)} ÷ ${fmt(a.check)} ÷ ${a.conversion}% = ${num(r.leads)} lid</div>
         </div>
@@ -464,7 +464,7 @@ function showResult() {
           </div>
           ${r.penaltyPct ? `<div class="stack">
             <div class="stack-bar"><div class="base" style="width:${basePct}%"></div><div class="pen" style="width:${100 - basePct}%"></div></div>
-            <div class="stack-legend"><span><i style="background:#4f46e5"></i>Bazaviy: ${fmt(r.baseOpt)}</span><span><i style="background:#ef4444"></i>Yo'qotish: ${fmt(r.optBudget - r.baseOpt)}</span></div>
+            <div class="stack-legend"><span><i style="background:hsl(240 5.9% 10%)"></i>Bazaviy: ${fmt(r.baseOpt)}</span><span><i style="background:hsl(0 84.2% 60.2%)"></i>Yo'qotish: ${fmt(r.optBudget - r.baseOpt)}</span></div>
           </div>` : ""}
         </div>
       </div>
